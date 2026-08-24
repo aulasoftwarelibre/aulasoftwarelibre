@@ -1,15 +1,25 @@
 "use client";
 import { useState, useEffect } from "react";
 
+import charlagit from "@/app/assets/charla-git.jpg";
+import hackaton from "@/app/assets/hackathon_2.jpeg";
+import team from "@/app/assets/the-team.jpg";
+import st1 from "@/app/assets/Salmorejo.jpg";
+import godot from "@/app/assets/godot.jpeg";
+import st2 from "@/app/assets/ST-2023.jpg";
+import suse from "@/app/assets/suse.jpg";
+
+import Image from "next/image";
+
 // 1. Preparamos los datos: La foto, el enlace y el texto alternativo
 const slides = [
-  { src: "charla-git.JPG", alt: "Charla de Git", href: "/ideas" },
-  { src: "hackathon_2.jpeg", alt: "Hackathon", href: "/ideas" },
-  { src: "the-team.JPG", alt: "The Team", href: "/us" },
-  { src: "Salmorejo.jpg", alt: "Salmorejo", href: "https://salmorejo.tech/" },
-  { src: "godot.jpeg", alt: "Godot", href: "/ideas" },
-  { src: "ST-2023.jpg", alt: "ST 2023", href: "https://salmorejo.tech/" },
-  { src: "suse.JPG", alt: "Suse", href: "https://salmorejo.tech/" },
+  { src: charlagit, alt: "Charla de Git", href: "/ideas" },
+  { src: hackaton, alt: "Hackathon", href: "/ideas" },
+  { src: team, alt: "The Team", href: "/us" },
+  { src: st1, alt: "Salmorejo", href: "https://salmorejo.tech/" },
+  { src: godot, alt: "Godot", href: "/ideas" },
+  { src: st2, alt: "ST 2023", href: "https://salmorejo.tech/" },
+  { src: suse, alt: "Suse", href: "https://salmorejo.tech/" },
 ];
 
 export default function Carousel() {
@@ -36,7 +46,7 @@ export default function Carousel() {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-[70%] justify-self-center h-75 md:h-150 mt-10 overflow-hidden rounded-xl shadow-lg group bg-white">
+    <div className="relative w-[70%] justify-self-center h-75 lg:h-150 md:h-100 mt-10 overflow-hidden rounded-xl shadow-lg group bg-white">
       
       {/* Contenedor de las imágenes (se desplaza usando translateX) */}
       <div
@@ -49,7 +59,7 @@ export default function Carousel() {
             href={slide.href}
             className="w-full h-full shrink-0 cursor-pointer block"
           >
-            <img
+            <Image
               src={slide.src}
               alt={slide.alt}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
