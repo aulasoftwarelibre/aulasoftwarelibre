@@ -74,7 +74,7 @@ export default function Landing() {
             {/* Llamamos a nuestro nuevo componente inteligente */}
             <Carousel />
             <div className="grid grid-cols-1 md:grid-cols-2 w-[80%] pt-[4vw] justify-self-center justify-items-center">
-                <p className="pt-10 pb-10 text-black text-xl md:text-3xl">¡Bienvenido!<br/><br/>El <b>Aula de Software Libre</b> de la Universidad de Córdoba es una entidad universitaria para el fomento y la difusión del <b>Software Libre</b> dentro de la comunidad universitaria y en la sociedad en general.<br/><br/>Gracias a la gran iniciativa y el espiritu de los estudiantes del Aula llevamos más de 15 años compartiendo conocimiento con el resto de la comunidad tecnológica de Córdoba.</p>
+                <p className="pt-10 pb-20 text-black text-xl md:text-3xl">¡Bienvenido!<br/><br/>El <b>Aula de Software Libre</b> de la Universidad de Córdoba es una entidad universitaria para el fomento y la difusión del <b>Software Libre</b> dentro de la comunidad universitaria y en la sociedad en general.<br/><br/>Gracias a la gran iniciativa y el espiritu de los estudiantes del Aula llevamos más de 15 años compartiendo conocimiento con el resto de la comunidad tecnológica de Córdoba.</p>
                 <Image
                     src={pinhuevo}
                     alt="pinhuevo-transparente"
