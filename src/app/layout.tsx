@@ -33,7 +33,7 @@ export default function RootLayout({
       lang="es"
       className={`${montserrat.variable} ${lato.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col relative">
+      <body className="min-h-full flex flex-col relative font-body">
         {/* Estos componentes se verán en todas las rutas */}
         <Navbar />
         <Header />
