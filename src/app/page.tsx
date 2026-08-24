@@ -1,6 +1,4 @@
 "use client";
-import Navbar from "@/app/navbar/navbar";
-import Header from "@/app/header/header";
 import Landing from "./landing/landing";
 
 import { useState } from "react";

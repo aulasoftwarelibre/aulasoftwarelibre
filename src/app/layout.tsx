@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./navbar/navbar";
 import Header from "./header/header";
+import Footer from "./footer/footer";
 
 const montserrat = localFont({
   src: "./fonts/Montserrat-ExtraBold.ttf",
@@ -42,6 +43,7 @@ export default function RootLayout({
         <main className="flex-1">
           {children}
         </main>
+        <Footer/>
       </body>
     </html>
   );
