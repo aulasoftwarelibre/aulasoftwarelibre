@@ -1,6 +1,7 @@
 "use client";
-import Navbar from "@/app/components/navbar/navbar";
-import Header from "@/app/components/header/header";
+import Navbar from "@/app/navbar/navbar";
+import Header from "@/app/header/header";
+import Landing from "./landing/landing";
 
 import { useState } from "react";
 
@@ -9,8 +10,7 @@ export default function Home() {
   const [isAnimationComplete, setIsAnimationComplete] = useState(false);
   return (
     <div className="relative" style={{ minHeight: "100vh" }}>
-        <Navbar />
-        <Header />
+        <Landing />
     </div>
   );
 }

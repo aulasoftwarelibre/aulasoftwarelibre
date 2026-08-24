@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "./navbar/navbar";
+import Header from "./header/header";
 
 const montserrat = localFont({
   src: "./fonts/Montserrat-ExtraBold.ttf",
@@ -31,7 +33,16 @@ export default function RootLayout({
       lang="es"
       className={`${montserrat.variable} ${lato.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-body">{children}</body>
+      <body className="min-h-full flex flex-col relative">
+        {/* Estos componentes se verán en todas las rutas */}
+        <Navbar />
+        <Header />
+        
+        {/* Aquí Next.js inyectará el page.tsx de la ruta en la que estés */}
+        <main className="flex-1">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }

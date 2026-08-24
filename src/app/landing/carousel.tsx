@@ -36,7 +36,7 @@ export default function Carousel() {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-[70%] justify-self-center h-75 md:h-150 overflow-hidden rounded-xl shadow-lg group bg-white">
+    <div className="relative w-[70%] justify-self-center h-75 md:h-150 mt-10 overflow-hidden rounded-xl shadow-lg group bg-white">
       
       {/* Contenedor de las imágenes (se desplaza usando translateX) */}
       <div
