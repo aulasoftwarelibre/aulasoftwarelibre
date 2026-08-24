@@ -73,13 +73,18 @@ export default function Landing() {
             <Carousel />
             <div className="grid grid-cols-2 w-[80%] pt-[4vw] justify-self-center justify-items-center">
                 <p className="h-200 text-black text-3xl">¡Bienvenido!<br/><br/>El <b>Aula de Software Libre</b> de la Universidad de Córdoba es una entidad universitaria para el fomento y la difusión del <b>Software Libre</b> dentro de la comunidad universitaria y en la sociedad en general.<br/><br/>Gracias a la gran iniciativa y el espiritu de los estudiantes del Aula llevamos más de 15 años compartiendo conocimiento con el resto de la comunidad tecnológica de Córdoba.</p>
-                <img src="pinhuevo-transparente.png" alt="pinhuevo-transparente" />
+                <Image
+                    src="pinhuevo-transparente.png"
+                    alt="pinhuevo-transparente"
+                    width={400}
+                    height={400}
+                />
             </div>
             <div>
                 <p className="text-black text-3xl justify-self-center">¡Siguenos en nuestras redes sociales!</p>
                 <div className="grid grid-cols-7 p-20 gap-10 justify-center">
                     {socials.map((social) => (
-                    <div key={social.id}>
+                    <div key={social.id} className="">
                         <a href={social.url}>
                         <Image
                             src={social.image}
